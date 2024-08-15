@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lawanyayi Public School</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* Your existing CSS code goes here */
+        /* Basic Reset */
+        * { 
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-image: url(' https://static.vecteezy.com/system/resources/thumbnails/000/699/959/small/curved-abstract-white-wallpaper.jpg');
+            float: none;
+
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: black;
+            overflow: hidden;
+            padding: 5px;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .navbar .school-name {
+            float: right;
+            font-family: 'Comic Neue', cursive;
+            font-size: 24px;
+            font-weight: bold;
+            color: #f2f2f2;
+            padding: 14px 20px;
+        }
+
+        /* Image Slider */
+        .slider {
+         position: relative;
+         padding: 12px;
+            max-width: 70%;
+            min-width: 40px; /* Minimum width for the slider */
+            min-height: 240px; /* Minimum height for the slider */
+            width: 100%; /* Adjust the width of the slider */
+            height: auto; /* Maintain aspect ratio */
+            margin: 50px auto 60px auto;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .slides img {
+            width: 100%;
+            height: 100%;
+            display: none;
+
+
+        }
+        .slides img.active {
+            display: block;
+        }
+        .slides h3{
+            text-align: center;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 20px 0;
+        }
+        footer .footer-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        footer .footer-content div {
+            margin: 10px;
+        }
+        footer .footer-content div img {
+            max-width: 50px;
+            margin-right: 10px;
+        }
+        footer p {
+            margin: 10px 0;
+            font-size: 14px;
+        }
+
+/*FEEDBACK FORM*/
+.form-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        h3{
+            text-align: center;
+
+        }
+        p{
+            text-align: center;
+            color: green;
+
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group textarea {
+            resize: vertical;
+        }
+        .form-group button {
+            background-color: green;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .form-group button:hover {
+            background-color:#ddd;
+            color: black;
+
+        }
+
+        #about-us {
+ 
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#about-us h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#about-us h3 {
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#about-us p {
+    line-height: 1.6;
+    color: #666;
+}
+
+#about-us ul {
+    list-style-type: disc;
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+#about-us li {
+    margin-bottom: 10px;
+}
+#about-us p
+  {
+    color: black; /* Set text color to red */
+}
+/* CSS FEEDBACK*/
+
+#feedback{
+  
+    padding: 40px;
+}
+#home h2{
+    color: darkblue;
+ 
+}
+#home {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #f4f4f4; /* Example background color */
+}
+
+.school-name {
+    font-family: 'Comic Sans MS', cursive, sans-serif; /* Kids font style */
+    font-size: 20px;
+    color: red;
+    animation: fadeInUp 5s ease-in-out;
+    background-color: yellowgreen;
+
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px); /* Move text 20px down */
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0); /* Move text to original position */
+    }
+}
+/*CONTACT US*/
+.cont{
+            position: relative;
+            padding: 12px;
+            max-width: 70%;
+            min-width: 400px; /* Minimum width for the slider */
+            min-height: 240px; /* Minimum height for the slider */
+            width: 10%; /* Adjust the width of the slider */
+           height: auto; /* Maintain aspect ratio */
+            margin: 50px auto 60px auto;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    .call  a p{
+            text-decoration: none;
+            color: red; 
+            font-weight: bold;
+            font-size: 20px;
+        }
+       .call a:hover {
+            text-decoration: underline;
+        }
+
+
+ 
+    </style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+ 
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="#about-us" target="_self">About Us</a>
+        <a href="#contact" target="_self">Contact Us</a>
+        <a href="#slide" target="_self">School Activities</a>
+        <a href="#feedback" target="_self">Parents Feedback Form</a>
+        <div class="school-name">Lawanyayi Public School</div>
+    </div>
+
+     <div id="home">
+        <h1 class="school-name"><marquee>Lawanyayi Public School !! "Arise, awake and stop not till the goal is reached" </marquee></h1>
+        <p class="call"><h3 style="color:green;">If you have any questions or need assistance, feel free to </h3><strong><a href="tel: +91 70209 30033" style="color: red; text-decoration:none ">Call Us Now: +91 70209 30033</a></strong>.</p>
+    </div>
+
+    <!-- Image Slider -->
+    <div id="slide"></div>
+    <div class="slider">
+        <div class="slides">
+            <h2 style="color: red;"><u>School Activities</u></h2>
+            <h4>At Lawanyayi Public School, we regularly host a variety of events to enhance our students' learning experience. 
+            From sports meets to cultural festivals, there's always something exciting happening!</h4>
+            <img src="img1.jpg" alt="Activity 1" class="active">
+            <img src="img2.jpg" alt="Activity 2">
+            <img src="img3.jpg" alt="Activity 3">
+            <img src="img5.jpg" alt="Activity 5">
+        </div>
+    </div>
+
+    <!-- ABOUT US -->
+    <div id="about-us">
+        <h2 style="color:red;">About Us</h2>
+        <p>Welcome to Lawanyayi Public School, where we believe in nurturing young minds and preparing them for a bright future. Our school is dedicated to providing high-quality education and fostering an environment where students can thrive academically, socially, and emotionally.</p>
+        <h3 style="color:red;">Our Vision</h3>
+        <p>At Lawanyayi Public School, our mission is to offer a well-rounded education that encourages curiosity, creativity, and critical thinking. We are committed to creating a safe and inclusive environment where each student can reach their full potential and become lifelong learners.</p><br>
+        <p>Our vision is to be a leading educational institution that sets the standard for excellence in teaching and learning. We strive to inspire students to become confident, responsible, and compassionate individuals who are prepared to face the challenges of the future.</p>
+        <h3 style="color:red;">Meet Our Team</h3>
+        <p>Our team of highly qualified teachers and staff are committed to providing a supportive and enriching learning environment. Each member of our team brings unique skills and experiences, ensuring that every student receives personalized attention and guidance.</p>
+    </div>
+
+    <!-- FEEDBACK -->
+    <div id="feedback">
+        <h2 style="color:red;">Parents Feedback Form</h2>
+        <p style="background-color: greenyellow; color: red;"><marquee>Your feedback is valuable to us. Please let us know how we can improve!! <br></marquee></p>
+        <div class="form-container">
+            <form id="feedbackForm" action="submit_feedback.php" method="post">
+                <div class="form-group">
+                    <label for="name">Parent's Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="child_name">Child's Name:</label>
+                    <input type="text" id="child_name" name="child_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Feedback:</label>
+                    <textarea id="feedback" name="feedback" rows="5" required></textarea>
+                </div>
+                <div class="form-group"> 
+                    <button type="submit">Submit Feedback</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- CONTACT US -->
+    <div id="contact"></div>
+    <div class="cont">
+        <h2 style="color: red;"><u>Contact Us</u></h2>
+        <img src="img7.jpg">
+        <h3>Anant Kulkarni <a href="+91 9028270018" style="text-decoration: none; color: black;">(+91 9028270018)</a></h3>
+        <h4 style="text-align: center;">President of Lawanyyai Public School and Deputy Editor Lokprabha</h4>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <a href="https://mail.google.com/">
+                    <img src="https://cdn-icons-png.freepik.com/512/7083/7083836.png" alt="Email Icon">
+                </a>
+                <span>Email: <a href="https://mail.google.com/" style="text-decoration: none; color: white;">anantkulkarni0018@gmail.com</a></span>
+            </div>
+            <div>
+                <a href="tel: +91 9028270018">
+                    <img src="https://icon-library.com/images/red-phone-icon-png/red-phone-icon-png-21.jpg" alt="Phone Icon">
+                </a>
+                <h5>Anant Kulkarni</h5>
+                <span>Phone: <a href="tel: +91 9028270018" style="text-decoration: none; color: white;">+91 90282 70018</a></span>
+            </div>
+            <div>
+                <a href="https://www.google.com/maps/@18.8448596,76.5380363,3a,75y,134.86h,70.35t/data=!3m7!1e1!3m5!1szXgy0ATa5YSJnh8IKG2ssA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.googleapis.com%2Fv1%2Fthumbnail%3Fpanoid%3DzXgy0ATa5YSJnh8IKG2ssA%26cb_client%3Dsearch.revgeo_and_fetch.gps%26w%3D96%26h%3D64%26yaw%3D263.41418%26pitch%3D0%26thumbfov%3D100!7i13312!8i6656?coh=205409&entry=ttu">
+                    <img src="https://img.freepik.com/premium-vector/location-icon-pointer-position-navigation-icon-vector-illustration_739746-45.jpg" alt="Location Icon">
+                </a>
+                <span>Location: In front of timbe hospital,<br> Ambeves parli vaijenath - 431515 </span>
+            </div>
+        </div>
+        <h6>&copy; 2024 Lawanyayi Public School. All Rights Reserved.</h6>
+        <h4>Website Owner: Bhagyashree Bhatalavande</h4>
+        <h4><a href="tel: +91 7058448141" style="text-decoration: none; color:white;">For Contact: +91 7058448141</a></h4>
+    </footer>
+
+    <!-- jQuery Script -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Image Slider
+            let slideIndex = 0;
+            function showSlides() {
+                $('.slides img').removeClass('active');
+                $('.slides img').eq(slideIndex).addClass('active');
+                slideIndex = (slideIndex + 1) % $('.slides img').length;
+            }
+            setInterval(showSlides, 2000); // Change image every 2 seconds
+
+            // Fee Structure
+            $('#fee-form').on('submit', function(event) {
+                event.preventDefault();
+
+                const studentName = $('#student-name').val();
+                const grade = $('#grade').val();
+                const paymentOption = $('#payment-option').val();
+                const totalFee = $('#total-fee').val();
+
+                $('#student-info').text(`Student Name: ${studentName}, Grade: ${grade}`);
+                $('#fee-info').text(`Total Fee: ${totalFee}, Payment Option: ${paymentOption}`);
+            });
+
+            // Set copyright year dynamically
+            const currentYear = new Date().getFullYear();
+            $('footer h6').text(`© ${currentYear} Lawanyayi Public School. All Rights Reserved.`);
+        });
+    </script>
+</body>
+</html>
